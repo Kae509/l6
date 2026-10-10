@@ -6,6 +6,8 @@ if (!sessionUser) {
   const user = JSON.parse(sessionUser);
   document.querySelector('#welcome-email').textContent = user.email;
   document.querySelector('#role-label').textContent = user.auteur ? 'Compte auteur' : 'Compte lecteur';
+  document.querySelector('#write-link').classList.toggle('is-hidden', user.auteur !== true);
+  document.querySelector('#admin-link').classList.toggle('is-hidden', user.auteur !== true);
 }
 
 document.querySelector('#logout-button').addEventListener('click', () => {

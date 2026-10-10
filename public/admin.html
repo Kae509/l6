@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administration | Atelier</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="content-page">
+    <header class="topbar">
+      <a class="wordmark" href="/index.html">Atelier<span>.</span></a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/articles.html">Articles</a>
+        <a href="/write-article.html">Écrire</a>
+        <a href="/admin.html" aria-current="page">Administration</a>
+        <button class="logout-button" id="logout-button" type="button">Déconnexion <span aria-hidden="true">↗</span></button>
+      </nav>
+    </header>
+    <section class="admin-section" aria-labelledby="admin-title">
+      <p class="eyebrow">GESTION DU SITE</p>
+      <h1 id="admin-title">Administration</h1>
+      <p class="list-message" id="admin-message" role="status" aria-live="polite">Chargement…</p>
+
+      <section class="admin-group" aria-labelledby="users-title">
+        <div class="admin-heading">
+          <h2 id="users-title">Utilisateurs</h2>
+          <span id="user-count"></span>
+        </div>
+        <div class="admin-list" id="user-list"></div>
+      </section>
+
+      <section class="admin-group" aria-labelledby="admin-articles-title">
+        <div class="admin-heading">
+          <h2 id="admin-articles-title">Articles</h2>
+          <span id="admin-article-count"></span>
+        </div>
+        <div class="admin-list" id="admin-article-list"></div>
+      </section>
+    </section>
+  </main>
+  <script src="/admin.js"></script>
+</body>
+</html>

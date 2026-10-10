@@ -32,15 +32,17 @@ Les données sont stockées dans `db.json`. Les utilisateurs contiennent les cha
 | `poivre` | Poivre généré pour le compte |
 | `sel` | Sel aléatoire généré pour le compte |
 
-La collection `articles` est actuellement vide. Le modèle d'article reste à définir; une proposition minimale serait `titre`, `contenu`, `auteurId` et `dateCreation`.
+La collection `article` contient `titre`, `article`, `date` et `publier` (booléen). La page `articles.html` n'affiche que les articles publiés, du plus récent au plus ancien. La page `write-article.html` permet aux auteurs connectés de publier un article ou de l'enregistrer comme brouillon. La page `admin.html`, réservée aux auteurs connectés, permet de lister et supprimer les comptes et les articles, et de publier ou dépublier les articles.
 
 Ressources JSON Server :
 
 - `GET/POST /users`
-- `GET/POST /articles`
+- `GET/POST /article`
+- `PATCH/DELETE /article/:id`
+- `DELETE /users/:id`
 
 ## Limites de sécurité
 
-Cette version est un prototype pédagogique, pas un système d'authentification pour la production. JSON Server expose directement les collections REST, notamment les empreintes et les sels des utilisateurs. Le hachage MD5 est trop rapide pour protéger des mots de passe; le poivre est aussi stocké dans la base et le calcul est effectué dans le navigateur. Une vraie application doit vérifier les mots de passe côté serveur avec Argon2id ou bcrypt, garder les secrets hors de la base et utiliser une session sécurisée côté serveur.
+Cette version est un prototype pédagogique, pas un système d'authentification pour la production. Les contrôles de rôle des pages sont côté navigateur et JSON Server expose directement les collections REST, notamment les opérations de suppression et de publication; ils ne constituent donc pas une autorisation sécurisée. JSON Server expose aussi les empreintes et les sels des utilisateurs. Le hachage MD5 est trop rapide pour protéger des mots de passe; le poivre est aussi stocké dans la base et le calcul est effectué dans le navigateur. Une vraie application doit vérifier les droits et mots de passe côté serveur, utiliser Argon2id ou bcrypt, garder les secrets hors de la base et utiliser une session sécurisée côté serveur.
 
 Le dossier `node_modules/` est exclu du dépôt par `.gitignore`.

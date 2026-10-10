@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Articles | Atelier</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="content-page">
+    <header class="topbar">
+      <a class="wordmark" href="/index.html">Atelier<span>.</span></a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/articles.html" aria-current="page">Articles</a>
+        <a class="author-link is-hidden" id="write-link" href="/write-article.html">Écrire</a>
+        <a class="author-link is-hidden" id="admin-link" href="/admin.html">Administration</a>
+        <a class="logout-button" id="login-link" href="/login.html">Connexion</a>
+        <button class="logout-button is-hidden" id="logout-button" type="button">Déconnexion <span aria-hidden="true">↗</span></button>
+      </nav>
+    </header>
+    <section class="article-list-section" aria-labelledby="articles-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LE JOURNAL</p>
+          <h1 id="articles-title">Articles</h1>
+        </div>
+        <a class="primary-link is-hidden" id="create-article-link" href="/write-article.html">Écrire un article <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="list-message" id="list-message" role="status" aria-live="polite">Chargement des articles…</p>
+      <div class="article-list" id="article-list"></div>
+    </section>
+  </main>
+  <script src="/articles.js"></script>
+</body>
+</html>

@@ -10,7 +10,12 @@
   <main class="dashboard">
     <header class="topbar">
       <a class="wordmark" href="/index.html">Atelier<span>.</span></a>
-      <button class="logout-button" id="logout-button" type="button">Déconnexion <span aria-hidden="true">↗</span></button>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/articles.html">Articles</a>
+        <a class="author-link is-hidden" id="write-link" href="/write-article.html">Écrire</a>
+        <a class="author-link is-hidden" id="admin-link" href="/admin.html">Administration</a>
+        <button class="logout-button" id="logout-button" type="button">Déconnexion <span aria-hidden="true">↗</span></button>
+      </nav>
     </header>
     <section class="welcome" aria-labelledby="welcome-title">
       <p class="eyebrow">ESPACE PERSONNEL</p>

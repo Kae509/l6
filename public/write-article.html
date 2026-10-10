@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Écrire un article | Atelier</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="content-page">
+    <header class="topbar">
+      <a class="wordmark" href="/index.html">Atelier<span>.</span></a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/articles.html">Articles</a>
+        <a href="/admin.html">Administration</a>
+        <button class="logout-button" id="logout-button" type="button">Déconnexion <span aria-hidden="true">↗</span></button>
+      </nav>
+    </header>
+    <section class="editor-section" aria-labelledby="editor-title">
+      <p class="eyebrow">ESPACE AUTEUR</p>
+      <h1 id="editor-title">Nouvel article</h1>
+      <form class="article-form" id="article-form">
+        <label for="title">Titre</label>
+        <input id="title" name="titre" type="text" maxlength="140" placeholder="Le titre de votre article" required>
+
+        <label for="body">Article</label>
+        <textarea id="body" name="article" rows="12" placeholder="Écrivez votre article…" required></textarea>
+
+        <label for="publier">Publication</label>
+        <select id="publier" name="publier">
+          <option value="true">Publier maintenant</option>
+          <option value="false">Enregistrer comme brouillon</option>
+        </select>
+
+        <button class="submit-button" type="submit" id="save-article">Enregistrer l’article <span aria-hidden="true">→</span></button>
+        <p class="form-message" id="article-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <script src="/write-article.js"></script>
+</body>
+</html>

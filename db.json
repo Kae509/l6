@@ -7,8 +7,25 @@
       "poivre": "49abe75725e586a2ad6928ec872a6251",
       "sel": "f2ce595cd8ce548610e2751c6b6e25c6",
       "id": "BdogoOGb7rU"
+    },
+    {
+      "email": "kellyngnmou@gmail.com",
+      "mdp": "057f0ffc385b7c73f5be9a203de5e57e",
+      "auteur": true,
+      "poivre": "580b8f8c438680ac37ecf2caebaac186",
+      "sel": "aa05ead8e9eb95df6aa8414318342275",
+      "id": "QGkBH7IeWeI"
     }
   ],
   "articles": [],
+  "article": [
+    {
+      "titre": "qyseufyzg",
+      "article": "kjfhvskhfkshfksdhg",
+      "date": "2026-10-10T15:24:14.513Z",
+      "publier": true,
+      "id": "dXVGR1kmAB4"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

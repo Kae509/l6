@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "copilot-test@example.com",
+      "mdp": "a2e04108e53e3233205753b8252e5505",
+      "auteur": false,
+      "poivre": "49abe75725e586a2ad6928ec872a6251",
+      "sel": "f2ce595cd8ce548610e2751c6b6e25c6",
+      "id": "BdogoOGb7rU"
+    }
+  ],
+  "articles": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

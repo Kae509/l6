@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connexion | Atelier</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="auth-layout">
+    <section class="intro" aria-label="Atelier">
+      <p class="eyebrow">ESPACE MEMBRE</p>
+      <h1>Atelier<span>.</span></h1>
+      <p class="intro-copy">Un espace simple pour retrouver vos articles et vos idées.</p>
+      <div class="intro-mark" aria-hidden="true">A</div>
+    </section>
+
+    <section class="auth-panel">
+      <nav class="mode-switch" aria-label="Accès au compte">
+        <button class="mode-button is-active" type="button" data-mode="login" aria-pressed="true">Connexion</button>
+        <button class="mode-button" type="button" data-mode="register" aria-pressed="false">Créer un compte</button>
+      </nav>
+
+      <div class="form-heading">
+        <p class="eyebrow" id="form-kicker">BON RETOUR</p>
+        <h2 id="form-title">Se connecter</h2>
+      </div>
+
+      <form id="auth-form" novalidate>
+        <label for="email">Adresse e-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+
+        <label for="password">Mot de passe</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" placeholder="8 caractères minimum" required>
+
+        <label class="author-choice is-hidden" id="author-choice" for="author">
+          <input id="author" name="author" type="checkbox">
+          <span>Créer un compte auteur</span>
+        </label>
+
+        <button class="submit-button" type="submit" id="submit-button">Se connecter <span aria-hidden="true">→</span></button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="privacy-note">Les mots de passe sont hachés avant leur enregistrement.</p>
+    </section>
+  </main>
+  <script src="/crypto-js.js"></script>
+  <script src="/auth.js"></script>
+</body>
+</html>
